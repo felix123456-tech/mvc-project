@@ -1,0 +1,18 @@
+name: 02-Simple-Workflow
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: build job
+        run: echo "Build Job is executing..."
+  deploy:
+    runs-on: windows-latest
+    steps:
+      - name: deploy job
+        run: echo "Deploy Job is executing..."
